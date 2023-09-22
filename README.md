@@ -1,4 +1,4 @@
-# Cat Detector
+# Cat Classification
 
 Use of a convolutional neural network to detect if an image is a cat or not (expanded upon the idea provided by DeepLearning.AI).
 
