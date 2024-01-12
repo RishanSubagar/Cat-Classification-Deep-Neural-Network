@@ -49,12 +49,7 @@ def two_layer_model(X, Y, layers_dims, learning_rate = 0.0075, num_iterations = 
     (n_x, n_h, n_y) = layers_dims
     
     # Initialize parameters dictionary, by calling one of the functions you'd previously implemented
-    #(≈ 1 line of code)
-    # parameters = ...
-    # YOUR CODE STARTS HERE
     parameters = initialize_parameters(n_x, n_h, n_y)
-    
-    # YOUR CODE ENDS HERE
     
     # Get W1, b1, W2 and b2 from the dictionary parameters.
     W1 = parameters["W1"]
@@ -63,13 +58,11 @@ def two_layer_model(X, Y, layers_dims, learning_rate = 0.0075, num_iterations = 
     b2 = parameters["b2"]
     
     # Loop (gradient descent)
-
     for i in range(0, num_iterations):
 
         # Forward propagation: LINEAR -> RELU -> LINEAR -> SIGMOID. Inputs: "X, W1, b1, W2, b2". Output: "A1, cache1, A2, cache2".
         A1, cache1 = linear_activation_forward(X, W1, b1, activation="relu")
         A2, cache2 = linear_activation_forward(A1, W2, b2, activation="sigmoid")
-        # YOUR CODE ENDS HERE
         
         # Compute cost
         cost = compute_cost(A2, Y)
